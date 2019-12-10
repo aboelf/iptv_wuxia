@@ -52,3 +52,22 @@
 2019-12-10T01:08:57.410Z - normal: Watching packages
 2019-12-10T01:08:57.514Z - normal: Run Application
 2019-12-10T01:09:01.443Z - success: preview server running at http://localhost:7456
+2019-12-10T01:36:39.101Z - normal: connected!
+2019-12-10T06:58:23.959Z - failed: [db-task][sync-changes] Failed to import asset /Users/huabo/iptv_wuxia/assets/Script/Controller/PlateController.js, message: Compile error: SyntaxError: /Users/huabo/iptv_wuxia/assets/Script/Controller/PlateController.js: Unexpected token (102:16)
+  100 |                 if(this.emptyPostions[i].column==this.emptyPostions[j].column){
+  101 |                     this.fallingDistance[this.emptyPostions[i].column]=
+> 102 |                 }
+      |                 ^
+  103 |             }
+  104 |         }
+  105 |     },
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3367:23)
+    at Parser.pp$3.parseExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3306:19)

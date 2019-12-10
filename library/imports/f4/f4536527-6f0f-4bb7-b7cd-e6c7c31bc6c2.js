@@ -75,6 +75,8 @@ cc.Class({
                 v.removeFromParent(false);
             });
             this.plateController.generateFallingBall();
+            this.plateController.computeFallingDistance();
+            this.plateController.updateBall();
             this.lineController.clearLines();
         }
         this.lineController.connectedBalls = [];
@@ -157,7 +159,21 @@ cc.Class({
             }
         }
     },
-
+    fallDown: function fallDown(_distance) {
+        var fallAction = null;
+        if (this.row % 2 == 0) {
+            if (this.y - 188 * _distance < 94) {
+                _distance = distance - 1;
+            }
+            fallAction = cc.moveBy(0.5 * _distance, 0, -188 * _distance);
+        } else {
+            if (this.y - 188 * _distance < 188) {
+                _distance = _distance - 1;
+            }
+            fallAction = cc.moveBy(0.5 * _distance, 0, -188 * _distance);
+        }
+        this.node.runAction(fallAction);
+    },
     onLoad: function onLoad() {
         this.setListener();
         this.plateController = this.node.parent.parent.getComponent("PlateController");

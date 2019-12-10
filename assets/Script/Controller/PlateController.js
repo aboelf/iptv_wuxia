@@ -76,17 +76,39 @@ cc.Class({
         for(let i=0;i<this.balls.length;i++){
             let oriBall = this.balls[i];
             if(oriBall.parent!=null){
+                let mark = false;
                 for(let j=0;j<this.emptyPostions.length;j++){
                     let ball = this.emptyPostions[j];
                     if(oriBall.column==ball.column){
                         if(oriBall.row>ball.row){
                             this.fallingBall.push(oriBall);
-                            continue;
+                            mark = true;
+                            break;
                         }
                     }
                 }
+                if(mark){
+                    continue;
+                }
             }
         }
+    },
+    computeFallingDistance(){
+        this.fallingDistance = {'0':0,'1':0,'2':0,'3':0,'4':0,'5':0,'6':0};
+        for(let i=0;i<this.emptyPostions.length;i++){
+            this.fallingDistance[this.emptyPostions[i].column]+=1;
+        }
+    },
+    updateBall(){
+        let that=this;
+        this.fallingBall.forEach(function(ball,i){
+            ball.getComponent("Ball").fallDown(that.fallingDistance[ball.getComponent("Ball").column]);
+        })
+        this.fallingBall = [];//完成下坠队列
+        this.emptyPostions.forEach(function(v,i){
+            v.destroy();
+        })
+        this.emptyPostions=[];//回收删除的珠子
     },
     onLoad () {
         // this.drawBgBlocks();

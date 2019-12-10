@@ -72,23 +72,23 @@ cc.Class({
     },
 
     generateFallingBall(){
-        this.fallingBall=[];
+        this.fallingBall=new Set();
         for(let i=0;i<this.balls.length;i++){
             let oriBall = this.balls[i];
             if(oriBall.parent!=null){
-                let mark = false;
+                let distance = 0;
                 for(let j=0;j<this.emptyPostions.length;j++){
                     let ball = this.emptyPostions[j];
                     if(oriBall.column==ball.column){
                         if(oriBall.row>ball.row){
-                            this.fallingBall.push(oriBall);
-                            mark = true;
-                            break;
+                            distance+=1;
+                            continue;
                         }
                     }
                 }
-                if(mark){
-                    continue;
+                if(distance>0){
+                    oriBall.distance=distance;
+                    this.fallingBall.add(oriBall);
                 }
             }
         }
@@ -102,7 +102,8 @@ cc.Class({
     updateBall(){
         let that=this;
         this.fallingBall.forEach(function(ball,i){
-            ball.getComponent("Ball").fallDown(that.fallingDistance[ball.getComponent("Ball").column]);
+            ball.getComponent("Ball").fallDown(ball.distance);
+            ball.distance = 0;
         })
         this.fallingBall = [];//完成下坠队列
         this.emptyPostions.forEach(function(v,i){

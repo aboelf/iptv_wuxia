@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "棋盘-单格",
+    "texture": "c3454384-056d-4b7b-8296-08ce3b7f50d8",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      197,
+      197
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      197,
+      197
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

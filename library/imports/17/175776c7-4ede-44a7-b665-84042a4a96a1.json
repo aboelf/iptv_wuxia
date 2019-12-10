@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ball-purple",
+    "texture": "56727d6a-068d-4a6d-8c38-ca0fb62907cf",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      191,
+      191
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      191,
+      191
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "血条描边",
+    "texture": "487ae857-bee5-47b2-95fe-320460882755",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1202,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1202,
+      100
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

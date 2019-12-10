@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "血条中心",
+    "texture": "6933815d-b778-464d-b5e1-64ddfee0a65d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      200,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      70
+    ],
+    "capInsets": [
+      30,
+      0,
+      30,
+      0
+    ]
+  }
+}

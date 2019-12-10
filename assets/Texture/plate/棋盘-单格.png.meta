@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "c3454384-056d-4b7b-8296-08ce3b7f50d8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "棋盘-单格": {
+      "ver": "1.0.3",
+      "uuid": "a99adaa9-f58a-434b-8aea-7b4acac46e67",
+      "rawTextureUuid": "c3454384-056d-4b7b-8296-08ce3b7f50d8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 197,
+      "height": 197,
+      "rawWidth": 197,
+      "rawHeight": 197,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

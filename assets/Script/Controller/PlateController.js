@@ -93,12 +93,7 @@ cc.Class({
             }
         }
     },
-    computeFallingDistance(){
-        this.fallingDistance = {'0':0,'1':0,'2':0,'3':0,'4':0,'5':0,'6':0};
-        for(let i=0;i<this.emptyPostions.length;i++){
-            this.fallingDistance[this.emptyPostions[i].column]+=1;
-        }
-    },
+
     updateBall(){
         let that=this;
         this.fallingBall.forEach(function(ball,i){

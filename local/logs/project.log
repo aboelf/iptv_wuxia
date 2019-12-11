@@ -1,73 +1,54 @@
-2019-12-10T01:08:47.667Z - normal: Load ~/.CocosCreator/settings.json
-2019-12-10T01:08:47.670Z - normal: checking language setting...
-2019-12-10T01:08:47.670Z - normal: Language: zh
-2019-12-10T01:08:51.108Z - success: protocol editor-framework registered
-2019-12-10T01:08:51.108Z - success: protocol app registered
-2019-12-10T01:08:51.108Z - success: protocol theme registered
-2019-12-10T01:08:51.108Z - success: protocol packages registered
-2019-12-10T01:08:51.108Z - success: protocol unpack registerred
-2019-12-10T01:08:51.108Z - success: protocol disable-commonjs registerred
-2019-12-10T01:08:51.179Z - normal: connected!
-2019-12-10T01:08:51.180Z - normal: Check project /Users/huabo/iptv_wuxia
-2019-12-10T01:08:51.183Z - normal: Initializing project /Users/huabo/iptv_wuxia
-2019-12-10T01:08:51.219Z - normal: Initializing Cocos2d
-2019-12-10T01:08:53.610Z - normal: Initializing Asset Database
-2019-12-10T01:08:53.795Z - success: protocol uuid registerred
-2019-12-10T01:08:53.795Z - success: protocol db registerred
-2019-12-10T01:08:53.796Z - success: protocol thumbnail registerred
-2019-12-10T01:08:53.796Z - normal: Loading editor/builtin packages
-2019-12-10T01:08:54.875Z - success: assets loaded
-2019-12-10T01:08:54.882Z - success: builder loaded
-2019-12-10T01:08:54.898Z - success: cocos-analytics loaded
-2019-12-10T01:08:54.915Z - success: console loaded
-2019-12-10T01:08:55.008Z - success: fb-instant-games loaded
-2019-12-10T01:08:55.013Z - success: hierarchy loaded
-2019-12-10T01:08:55.017Z - success: inspector loaded
-2019-12-10T01:08:55.019Z - success: keystore loaded
-2019-12-10T01:08:55.023Z - success: node-library loaded
-2019-12-10T01:08:55.024Z - success: package-asset loaded
-2019-12-10T01:08:55.025Z - success: preferences loaded
-2019-12-10T01:08:55.028Z - success: project-exporter loaded
-2019-12-10T01:08:55.059Z - success: project-importer loaded
-2019-12-10T01:08:55.062Z - success: project-settings loaded
-2019-12-10T01:08:55.105Z - success: ui-kit loaded
-2019-12-10T01:08:55.109Z - success: scene loaded
-2019-12-10T01:08:55.111Z - success: sprite-editor loaded
-2019-12-10T01:08:55.115Z - success: store loaded
-2019-12-10T01:08:55.120Z - success: timeline loaded
-2019-12-10T01:08:55.120Z - normal: Loading builtin packages
-2019-12-10T01:08:55.156Z - success: asset-db-debugger loaded
-2019-12-10T01:08:55.160Z - success: color-picker loaded
-2019-12-10T01:08:55.164Z - success: jsb-adapter loaded
-2019-12-10T01:08:55.168Z - success: package-manager loaded
-2019-12-10T01:08:55.821Z - success: qqplay-adapter loaded
-2019-12-10T01:08:55.866Z - success: sdkbox loaded
-2019-12-10T01:08:55.871Z - success: tester loaded
-2019-12-10T01:08:55.875Z - success: ui-grid loaded
-2019-12-10T01:08:55.898Z - success: ui-kit-preview-extra loaded
-2019-12-10T01:08:55.930Z - success: ui-kit-preview loaded
-2019-12-10T01:08:55.935Z - success: ui-tree loaded
-2019-12-10T01:08:55.950Z - success: weapp-adapter loaded
-2019-12-10T01:08:57.382Z - normal: Loading packages
-2019-12-10T01:08:57.410Z - normal: Watching packages
-2019-12-10T01:08:57.514Z - normal: Run Application
-2019-12-10T01:09:01.443Z - success: preview server running at http://localhost:7456
-2019-12-10T01:36:39.101Z - normal: connected!
-2019-12-10T06:58:23.959Z - failed: [db-task][sync-changes] Failed to import asset /Users/huabo/iptv_wuxia/assets/Script/Controller/PlateController.js, message: Compile error: SyntaxError: /Users/huabo/iptv_wuxia/assets/Script/Controller/PlateController.js: Unexpected token (102:16)
-  100 |                 if(this.emptyPostions[i].column==this.emptyPostions[j].column){
-  101 |                     this.fallingDistance[this.emptyPostions[i].column]=
-> 102 |                 }
-      |                 ^
-  103 |             }
-  104 |         }
-  105 |     },
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3750:12)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3367:23)
-    at Parser.pp$3.parseExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3306:19)
+2019-12-11T00:38:48.184Z - normal: Load ~/.CocosCreator/settings.json
+2019-12-11T00:38:48.186Z - normal: checking language setting...
+2019-12-11T00:38:48.186Z - normal: Language: zh
+2019-12-11T00:38:49.641Z - success: protocol editor-framework registered
+2019-12-11T00:38:49.641Z - success: protocol app registered
+2019-12-11T00:38:49.642Z - success: protocol theme registered
+2019-12-11T00:38:49.642Z - success: protocol packages registered
+2019-12-11T00:38:49.642Z - success: protocol unpack registerred
+2019-12-11T00:38:49.642Z - success: protocol disable-commonjs registerred
+2019-12-11T00:38:49.731Z - normal: connected!
+2019-12-11T00:38:49.734Z - normal: Check project /Users/huabo/iptv_wuxia
+2019-12-11T00:38:49.737Z - normal: Initializing project /Users/huabo/iptv_wuxia
+2019-12-11T00:38:49.756Z - normal: Initializing Cocos2d
+2019-12-11T00:38:50.871Z - normal: Initializing Asset Database
+2019-12-11T00:38:50.951Z - success: protocol uuid registerred
+2019-12-11T00:38:50.952Z - success: protocol db registerred
+2019-12-11T00:38:50.952Z - success: protocol thumbnail registerred
+2019-12-11T00:38:50.952Z - normal: Loading editor/builtin packages
+2019-12-11T00:38:51.169Z - success: assets loaded
+2019-12-11T00:38:51.172Z - success: builder loaded
+2019-12-11T00:38:51.174Z - success: cocos-analytics loaded
+2019-12-11T00:38:51.177Z - success: console loaded
+2019-12-11T00:38:51.201Z - success: fb-instant-games loaded
+2019-12-11T00:38:51.206Z - success: hierarchy loaded
+2019-12-11T00:38:51.211Z - success: inspector loaded
+2019-12-11T00:38:51.212Z - success: keystore loaded
+2019-12-11T00:38:51.216Z - success: node-library loaded
+2019-12-11T00:38:51.217Z - success: package-asset loaded
+2019-12-11T00:38:51.218Z - success: preferences loaded
+2019-12-11T00:38:51.221Z - success: project-exporter loaded
+2019-12-11T00:38:51.232Z - success: project-importer loaded
+2019-12-11T00:38:51.235Z - success: project-settings loaded
+2019-12-11T00:38:51.251Z - success: ui-kit loaded
+2019-12-11T00:38:51.254Z - success: scene loaded
+2019-12-11T00:38:51.255Z - success: sprite-editor loaded
+2019-12-11T00:38:51.258Z - success: store loaded
+2019-12-11T00:38:51.266Z - success: timeline loaded
+2019-12-11T00:38:51.266Z - normal: Loading builtin packages
+2019-12-11T00:38:51.284Z - success: asset-db-debugger loaded
+2019-12-11T00:38:51.295Z - success: color-picker loaded
+2019-12-11T00:38:51.299Z - success: jsb-adapter loaded
+2019-12-11T00:38:51.305Z - success: package-manager loaded
+2019-12-11T00:38:51.781Z - success: qqplay-adapter loaded
+2019-12-11T00:38:51.802Z - success: sdkbox loaded
+2019-12-11T00:38:51.806Z - success: tester loaded
+2019-12-11T00:38:51.810Z - success: ui-grid loaded
+2019-12-11T00:38:51.823Z - success: ui-kit-preview-extra loaded
+2019-12-11T00:38:51.839Z - success: ui-kit-preview loaded
+2019-12-11T00:38:51.844Z - success: ui-tree loaded
+2019-12-11T00:38:51.861Z - success: weapp-adapter loaded
+2019-12-11T00:38:53.111Z - normal: Loading packages
+2019-12-11T00:38:53.115Z - normal: Watching packages
+2019-12-11T00:38:53.176Z - normal: Run Application
+2019-12-11T00:38:55.831Z - success: preview server running at http://localhost:7456

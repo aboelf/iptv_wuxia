@@ -2,9 +2,9 @@
 cc._RF.push(module, 'c4454MCzMZCbqroZ88dQXxR', 'PlateController', __filename);
 // Script/Controller/PlateController.js
 
-'use strict';
+"use strict";
 
-var _Config = require('../Config/Config');
+var _Config = require("../Config/Config");
 
 window.Global = {
     plateController: null,
@@ -98,12 +98,6 @@ cc.Class({
                     this.fallingBall.add(oriBall);
                 }
             }
-        }
-    },
-    computeFallingDistance: function computeFallingDistance() {
-        this.fallingDistance = { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 };
-        for (var i = 0; i < this.emptyPostions.length; i++) {
-            this.fallingDistance[this.emptyPostions[i].column] += 1;
         }
     },
     updateBall: function updateBall() {

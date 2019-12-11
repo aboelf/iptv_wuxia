@@ -42,45 +42,6 @@ cc.Class({
             }
         }
     },
-    findSameInColumn: function findSameInColumn(_ele, _array) {
-        //检查列中重复项
-        var tmp = [];
-        for (var i = 0; i < _array.length; i++) {
-            if (_ele == _array[i]) {
-                tmp.push(_ele);
-            }
-        }
-        return tmp;
-    },
-    findLowestRow: function findLowestRow() {
-        cc.log('findLowestRow');
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-    touchRelease: function touchRelease(eventTouch) {
-        var _this = this;
-
-        this.plateController.effectArea.active = false;
-        this.node.zIndex = 0;
-        this.canConnectballs.forEach(function (v) {
-            v.zIndex = 0;
-        });
-        // cc.log(this.lineController.connectedBalls);
-        //检测是否可消除
-        if (this.lineController.connectedBalls.length >= 3) {
-            this.emptyPositionX = [];
-            this.emptyPositionY = [];
-            this.lineController.connectedBalls.forEach(function (v) {
-                _this.plateController.emptyPostions.push(v);
-                v.removeFromParent(false);
-            });
-            this.plateController.generateFallingBall();
-            // this.plateController.computeFallingDistance();
-            this.plateController.updateBall();
-            this.lineController.clearLines();
-        }
-        this.lineController.connectedBalls = [];
-    },
     filterBalls: function filterBalls(balls, type) {
         //筛选球
         var returnBalls = [];
@@ -112,6 +73,32 @@ cc.Class({
             return false;
         }
     },
+
+    // LIFE-CYCLE CALLBACKS:
+    touchRelease: function touchRelease(eventTouch) {
+        var _this = this;
+
+        this.plateController.effectArea.active = false;
+        this.node.zIndex = 0;
+        this.canConnectballs.forEach(function (v) {
+            v.zIndex = 0;
+        });
+        //检测是否可消除
+        if (this.lineController.connectedBalls.length >= 3) {
+            this.emptyPositionX = [];
+            this.emptyPositionY = [];
+            this.lineController.connectedBalls.forEach(function (v) {
+                _this.plateController.emptyPostions.push(v);
+                v.removeFromParent(false);
+            });
+            this.plateController.generateFallingBall();
+            // this.plateController.computeFallingDistance();
+            this.plateController.updateBall();
+            this.lineController.clearLines();
+        }
+        this.dot.parent = null;
+        this.lineController.connectedBalls = [];
+    },
     setListener: function setListener() {
         this.node.on(cc.Node.EventType.TOUCH_START, function (eventTouch) {
             this.plateController.effectArea.active = true; //激活遮罩
@@ -120,8 +107,8 @@ cc.Class({
             this.canConnectballs.forEach(function (v) {
                 v.zIndex = 1;
             }); //设置所有同颜色珠子盖在遮罩上
-            this.dot = cc.instantiate(this.plateController.dotPrefab); //创建触摸点
-            this.dot.parent = this.node.parent.parent.children[1]; //触摸点添加到LineArea
+            if (!this.dot) this.dot = cc.instantiate(this.plateController.dotPrefab); //创建触摸点
+            this.dot.parent = this.lineController.node; //触摸点添加到LineArea
             this.dot.setPosition(this.node.getPosition()); //设置触摸点位置为圆心
         }, this);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, function (eventTouch) {
@@ -135,6 +122,7 @@ cc.Class({
     onCollisionEnter: function onCollisionEnter(other, self) {
         if (this.lineController.connectedBalls.length == 0) {
             this.lineController.connectedBalls.push(self.node);
+            // cc.log(this.lineController.connectedBalls)
         } else {
             if (self.node.zIndex == 1) {
                 //判断高亮
@@ -156,6 +144,7 @@ cc.Class({
                             break;
                     }
                 }
+                // cc.log(this.lineController.connectedBalls)
             }
         }
     },
@@ -163,6 +152,7 @@ cc.Class({
         var fallAction = null;
         fallAction = cc.moveBy(0.5 * _distance, 0, -188 * _distance);
         this.node.runAction(fallAction);
+        this.node.row = this.node.row - _distance;
     },
     onLoad: function onLoad() {
         this.setListener();

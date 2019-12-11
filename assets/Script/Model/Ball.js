@@ -50,11 +50,45 @@ cc.Class({
         return returnBalls;
     },
     roundBalls(ball) { //返回周围球(ball传入最后入队列的球)
-        if (Math.abs(ball.row - this.row) < 2 && Math.abs(ball.column - this.column) < 2) {
-            return true;
-        } else {
-            return false;
+        cc.log('最后的球')
+        cc.log(ball)
+        cc.log('碰撞的球')
+        cc.log(this.node)
+        if(ball.column==this.column){
+            if(Math.abs(ball.row-this.row)==1){
+                return true;
+            }else{
+                return false
+            }
+        }else{
+            if(ball.column%2==0){
+                if(Math.abs(this.column-ball.column)==1){
+                    if(this.row==ball.row || this.row==ball.row-1){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }else{
+                    return false;
+                }
+            }else{
+                if(Math.abs(this.column-ball.column)==1){
+                    if(this.row==ball.row || this.row==ball.row+1){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }else{
+                    return false;
+                }
+            }
         }
+        
+        // if (Math.abs(ball.row - this.row) < 2 && Math.abs(ball.column - this.column) < 2 && (ball.column-this.column)) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
     },
     alreadyConnected(ball) { //验证球是否已经在队列里
         if (this.lineController.connectedBalls.includes(ball)) {
@@ -116,7 +150,7 @@ cc.Class({
     onCollisionEnter: function (other, self) {
         if (this.lineController.connectedBalls.length == 0) {
             this.lineController.connectedBalls.push(self.node);
-            // cc.log(this.lineController.connectedBalls)
+            cc.log(this.lineController.connectedBalls)
         } else {
             if (self.node.zIndex == 1) { //判断高亮
                 if (this.roundBalls(this.lineController.connectedBalls[this.lineController.connectedBalls.length - 1])) { //判断附近球

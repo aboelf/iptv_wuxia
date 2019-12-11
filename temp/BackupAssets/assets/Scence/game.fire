@@ -701,7 +701,7 @@
     "dotPrefab": {
       "__uuid__": "fd7ea96a-fc9e-48bf-940a-047f81c775d3"
     },
-    "debug": false,
+    "debug": true,
     "ballPrefabs": [
       {
         "__uuid__": "a266fd6e-979a-4bb4-b8a3-1c1e88d5881d"

@@ -195,8 +195,8 @@
     "relativePath": "Prefabs/line.prefab"
   },
   "eb77e4f3-162a-4b8a-aa90-24f7984b9891": {
-    "asset": 1576049674000,
-    "meta": 1576049674000,
+    "asset": 1576059365000,
+    "meta": 1576059365000,
     "relativePath": "Scence/game.fire"
   },
   "9c22b737-45e7-41ed-bac7-75f6cc58e046": {
@@ -445,8 +445,8 @@
     "relativePath": "Script/Config/Config.js"
   },
   "f4536527-6f0f-4bb7-b7cd-e6c7c31bc6c2": {
-    "asset": 1576049797000,
-    "meta": 1576049800000,
+    "asset": 1576061201000,
+    "meta": 1576061205000,
     "relativePath": "Script/Model/Ball.js"
   }
 }

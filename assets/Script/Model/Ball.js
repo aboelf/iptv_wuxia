@@ -86,6 +86,8 @@ cc.Class({
             this.plateController.generateFallingBall();
             this.plateController.updateBall();
             this.lineController.clearLines();
+        }else{
+            this.lineController.clearLines();
         }
         this.dot.parent = null;
         this.lineController.connectedBalls = [];

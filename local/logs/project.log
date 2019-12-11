@@ -54,3 +54,4 @@
 2019-12-11T06:13:33.184Z - success: preview server running at http://localhost:7456
 2019-12-11T07:32:26.246Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:52571
 2019-12-11T07:32:29.998Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:52573
+2019-12-11T07:34:23.124Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:53851

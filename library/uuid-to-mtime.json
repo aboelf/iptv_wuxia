@@ -195,8 +195,8 @@
     "relativePath": "Prefabs/line.prefab"
   },
   "eb77e4f3-162a-4b8a-aa90-24f7984b9891": {
-    "asset": 1576049626000,
-    "meta": 1576049626000,
+    "asset": 1576049674000,
+    "meta": 1576049674000,
     "relativePath": "Scence/game.fire"
   },
   "9c22b737-45e7-41ed-bac7-75f6cc58e046": {
@@ -434,19 +434,19 @@
     "meta": 1575879066000,
     "relativePath": "prefab/webview.prefab"
   },
-  "5d6b9a92-dd5a-4a14-b59d-3a92b24751e8": {
-    "asset": 1576049185000,
-    "meta": 1576049220000,
-    "relativePath": "Script/Config/Config.js"
-  },
   "c4454302-ccc6-426e-aae8-67cf1d417c51": {
     "asset": 1576049139000,
     "meta": 1576049220000,
     "relativePath": "Script/Controller/PlateController.js"
   },
+  "5d6b9a92-dd5a-4a14-b59d-3a92b24751e8": {
+    "asset": 1576049723000,
+    "meta": 1576049723000,
+    "relativePath": "Script/Config/Config.js"
+  },
   "f4536527-6f0f-4bb7-b7cd-e6c7c31bc6c2": {
-    "asset": 1576049213000,
-    "meta": 1576049220000,
+    "asset": 1576049797000,
+    "meta": 1576049800000,
     "relativePath": "Script/Model/Ball.js"
   }
 }

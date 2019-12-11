@@ -32,7 +32,7 @@ export const GRID_PIXEL_HEIGHT = GRID_HEIGHT * CELL_HEIGHT;
 
 // ********************   时间表  animation time **************************
 export const ANITIME = {    
-    DOWN: 0.1,
+    DOWN: 0.15,
     BOMB_DELAY: 0.3,
     BOMB_BIRD_DELAY: 0.7,
     DIE_SHAKE: 0.4 // 死前抖动

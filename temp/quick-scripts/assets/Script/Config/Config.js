@@ -1,6 +1,6 @@
 (function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/Config/Config.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
 cc._RF.push(module, '5d6b9qS3VpKFLWdOpKyR1Ho', 'Config', __filename);
-// Script/Config.js
+// Script/Config/Config.js
 
 "use strict";
 
@@ -39,9 +39,7 @@ var GRID_PIXEL_HEIGHT = exports.GRID_PIXEL_HEIGHT = GRID_HEIGHT * CELL_HEIGHT;
 
 // ********************   时间表  animation time **************************
 var ANITIME = exports.ANITIME = {
-    TOUCH_MOVE: 0.3,
-    DIE: 0.2,
-    DOWN: 0.5,
+    DOWN: 0.1,
     BOMB_DELAY: 0.3,
     BOMB_BIRD_DELAY: 0.7,
     DIE_SHAKE: 0.4 // 死前抖动

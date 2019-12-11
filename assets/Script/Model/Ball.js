@@ -1,12 +1,3 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 import {
     ANITIME
 } from '../Config/Config';
@@ -91,8 +82,8 @@ cc.Class({
                 this.plateController.emptyPostions.push(v);
                 v.removeFromParent(false);
             })
+            this.plateController.generateNewBalls();
             this.plateController.generateFallingBall();
-            // this.plateController.computeFallingDistance();
             this.plateController.updateBall();
             this.lineController.clearLines();
         }
@@ -104,7 +95,7 @@ cc.Class({
         this.node.on(cc.Node.EventType.TOUCH_START, function (eventTouch) {
             this.plateController.effectArea.active = true; //激活遮罩
             this.node.zIndex = 1; //设置选中珠子盖在遮罩上
-            this.canConnectballs = this.filterBalls(this.plateController.balls, this.node.name);
+            this.canConnectballs = this.filterBalls(this.plateController.ballArea.children, this.node.name);
             this.canConnectballs.forEach(v => {
                 v.zIndex = 1;
             }) //设置所有同颜色珠子盖在遮罩上
@@ -146,7 +137,7 @@ cc.Class({
     },
     fallDown(_distance){
         let fallAction = null;
-        fallAction = cc.moveBy(0.5*_distance,0,-188*_distance);
+        fallAction = cc.moveBy(ANITIME.DOWN*_distance,0,-188*_distance);
         this.node.runAction(fallAction);
         this.node.row=this.node.row-_distance;
     },

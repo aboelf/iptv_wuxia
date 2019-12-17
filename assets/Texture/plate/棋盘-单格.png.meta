@@ -1,13 +1,16 @@
 {
-  "ver": "2.2.0",
+  "ver": "2.3.3",
   "uuid": "c3454384-056d-4b7b-8296-08ce3b7f50d8",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
   "subMetas": {
     "棋盘-单格": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "a99adaa9-f58a-434b-8aea-7b4acac46e67",
       "rawTextureUuid": "c3454384-056d-4b7b-8296-08ce3b7f50d8",
       "trimType": "auto",

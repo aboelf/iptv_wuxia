@@ -7,6 +7,8 @@ cc._RF.push(module, '5d6b9qS3VpKFLWdOpKyR1Ho', 'Config');
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.randomRange = randomRange;
+exports.randomRangeInt = randomRangeInt;
 var CELL_TYPE = exports.CELL_TYPE = {
     EMPTY: 0,
     A: 1,
@@ -44,5 +46,15 @@ var ANITIME = exports.ANITIME = {
     BOMB_BIRD_DELAY: 0.7,
     DIE_SHAKE: 0.4 // 死前抖动
 };
+function randomRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+function randomRangeInt(min, max) {
+    if (arguments.length == 2) {
+        return Math.floor(this.randomRange(min, max));
+    } else if (arguments.length == 1) {
+        return arguments[0][Math.floor(this.randomRange(0, arguments[0].length))];
+    }
+}
 
 cc._RF.pop();

@@ -63,8 +63,44 @@ cc.Class({
             }
         }
     },
-
-    generateFallingBall() {
+    getRoundBalls(ball){
+        let balls = [];
+        for (let i = 0; i < this.ballArea.children.length; i++) {
+            const element = this.ballArea.children[i];
+            if(element.name!='effectArea'){
+                if(element.column==ball.column){
+                    if(Math.abs(ball.row-element.row)==1){
+                        balls.push(element);
+                        continue;
+                    }
+                }else{
+                    if(ball.column%2!=0){
+                        if(Math.abs(ball.column-element.column)==1){    
+                            if(ball.row==element.row || ball.row==element.row-1){
+                                balls.push(element);
+                                continue;    
+                            }
+                        }
+                    }else{
+                        if(Math.abs(ball.column-element.column)==1){
+                            if(ball.row==element.row || ball.row==element.row+1){
+                                balls.push(element);
+                                continue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return balls;
+    },
+    deleteBalls(_balls){//随机消除
+        this.emptyPostions=_balls;
+        this.emptyPostions.forEach(function(v){
+            v.removeFromParent(false);
+        })
+    },
+    countBallsFallingDistance() {//计算所有珠子下降距离
         this.fallingBall = new Set();
         for (let i = 0; i < this.ballArea.children.length; i++) {
             if (this.ballArea.children[i].name != "effectArea") {

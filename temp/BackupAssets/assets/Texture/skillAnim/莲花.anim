@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "莲花",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.1,
+  "sample": 20,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "0bcc2568-ac78-44e6-8301-2c996506db08"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "be66e603-ad15-48d5-bb17-688d383ab322"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

@@ -1,13 +1,16 @@
 {
-  "ver": "2.2.0",
+  "ver": "2.3.3",
   "uuid": "6933815d-b778-464d-b5e1-64ddfee0a65d",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
   "subMetas": {
     "血条中心": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c7286400-06b9-4367-85f1-b4e237dc8abc",
       "rawTextureUuid": "6933815d-b778-464d-b5e1-64ddfee0a65d",
       "trimType": "auto",

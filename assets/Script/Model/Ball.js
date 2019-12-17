@@ -1,5 +1,5 @@
 import {
-    ANITIME
+    ANITIME,randomRange,randomRangeInt
 } from '../Config/Config';
 cc.Class({
     extends: cc.Component,
@@ -50,10 +50,6 @@ cc.Class({
         return returnBalls;
     },
     roundBalls(ball) { //返回周围球(ball传入最后入队列的球)
-        cc.log('最后的球')
-        cc.log(ball)
-        cc.log('碰撞的球')
-        cc.log(this.node)
         if(ball.column==this.column){
             if(Math.abs(ball.row-this.row)==1){
                 return true;
@@ -82,14 +78,9 @@ cc.Class({
                     return false;
                 }
             }
-        }
-        
-        // if (Math.abs(ball.row - this.row) < 2 && Math.abs(ball.column - this.column) < 2 && (ball.column-this.column)) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+        }       
     },
+    
     alreadyConnected(ball) { //验证球是否已经在队列里
         if (this.lineController.connectedBalls.includes(ball)) {
             if(this.lineController.connectedBalls.indexOf(ball)==this.lineController.connectedBalls.length-2)
@@ -110,16 +101,17 @@ cc.Class({
         })
         //检测是否可消除
         if(this.lineController.connectedBalls.length>=3){
-            this.emptyPositionX = [];
-            this.emptyPositionY = [];
-            this.lineController.connectedBalls.forEach(v=>{
-                this.plateController.emptyPostions.push(v);
-                v.removeFromParent(false);
-            })
+            this.plateController.deleteBalls(this.lineController.connectedBalls);
             this.plateController.generateNewBalls();
-            this.plateController.generateFallingBall();
+            this.plateController.countBallsFallingDistance();
             this.plateController.updateBall();
             this.lineController.clearLines();
+            // if(this.lineController.connectedBalls.length>=5){
+            //     this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[randomRangeInt(0,39)]))
+            //     this.plateController.generateNewBalls();
+            //     this.plateController.countBallsFallingDistance();
+            //     this.plateController.updateBall();
+            // }
         }else{
             this.lineController.clearLines();
         }
@@ -150,7 +142,6 @@ cc.Class({
     onCollisionEnter: function (other, self) {
         if (this.lineController.connectedBalls.length == 0) {
             this.lineController.connectedBalls.push(self.node);
-            cc.log(this.lineController.connectedBalls)
         } else {
             if (self.node.zIndex == 1) { //判断高亮
                 if (this.roundBalls(this.lineController.connectedBalls[this.lineController.connectedBalls.length - 1])) { //判断附近球

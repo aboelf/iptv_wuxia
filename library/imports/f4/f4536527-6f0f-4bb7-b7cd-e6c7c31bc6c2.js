@@ -57,10 +57,6 @@ cc.Class({
     },
     roundBalls: function roundBalls(ball) {
         //返回周围球(ball传入最后入队列的球)
-        cc.log('最后的球');
-        cc.log(ball);
-        cc.log('碰撞的球');
-        cc.log(this.node);
         if (ball.column == this.column) {
             if (Math.abs(ball.row - this.row) == 1) {
                 return true;
@@ -90,12 +86,6 @@ cc.Class({
                 }
             }
         }
-
-        // if (Math.abs(ball.row - this.row) < 2 && Math.abs(ball.column - this.column) < 2 && (ball.column-this.column)) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
     },
     alreadyConnected: function alreadyConnected(ball) {
         //验证球是否已经在队列里
@@ -110,8 +100,6 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     touchRelease: function touchRelease(eventTouch) {
-        var _this = this;
-
         this.plateController.effectArea.active = false;
         this.node.zIndex = 0;
         this.canConnectballs.forEach(function (v) {
@@ -119,16 +107,17 @@ cc.Class({
         });
         //检测是否可消除
         if (this.lineController.connectedBalls.length >= 3) {
-            this.emptyPositionX = [];
-            this.emptyPositionY = [];
-            this.lineController.connectedBalls.forEach(function (v) {
-                _this.plateController.emptyPostions.push(v);
-                v.removeFromParent(false);
-            });
+            this.plateController.deleteBalls(this.lineController.connectedBalls);
             this.plateController.generateNewBalls();
-            this.plateController.generateFallingBall();
+            this.plateController.countBallsFallingDistance();
             this.plateController.updateBall();
             this.lineController.clearLines();
+            if (this.lineController.connectedBalls.length >= 5) {
+                this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[(0, _Config.randomRangeInt)(0, 39)]));
+                this.plateController.generateNewBalls();
+                this.plateController.countBallsFallingDistance();
+                this.plateController.updateBall();
+            }
         } else {
             this.lineController.clearLines();
         }
@@ -158,7 +147,6 @@ cc.Class({
     onCollisionEnter: function onCollisionEnter(other, self) {
         if (this.lineController.connectedBalls.length == 0) {
             this.lineController.connectedBalls.push(self.node);
-            cc.log(this.lineController.connectedBalls);
         } else {
             if (self.node.zIndex == 1) {
                 //判断高亮

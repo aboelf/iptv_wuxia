@@ -37,5 +37,14 @@ export const ANITIME = {
     BOMB_BIRD_DELAY: 0.7,
     DIE_SHAKE: 0.4 // 死前抖动
 }
-
+export function randomRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+export function randomRangeInt(min, max) {
+    if (arguments.length == 2) {
+        return Math.floor(this.randomRange(min, max));
+    } else if (arguments.length == 1) {
+        return arguments[0][Math.floor(this.randomRange(0, arguments[0].length))];
+    }
+}
 

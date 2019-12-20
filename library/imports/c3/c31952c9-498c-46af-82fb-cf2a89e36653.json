@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ABACHA_tex",
+    "texture": "19ec0bb5-8008-4d2f-b677-3efef99677e3",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      504,
+      644
+    ],
+    "offset": [
+      -3,
+      189
+    ],
+    "originalSize": [
+      512,
+      1024
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

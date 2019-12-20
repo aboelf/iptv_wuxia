@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "备战",
+    "texture": "a75fdb35-2c55-45ad-ac16-e3bb42b6ba16",
+    "atlas": "",
+    "rect": [
+      7,
+      7,
+      85,
+      85
+    ],
+    "offset": [
+      1.5,
+      -1.5
+    ],
+    "originalSize": [
+      96,
+      96
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

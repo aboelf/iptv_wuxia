@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "侠客",
+    "texture": "8a8d71f7-a12b-4bbf-ae0c-79bc460f370c",
+    "atlas": "",
+    "rect": [
+      10,
+      0,
+      74,
+      93
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      94,
+      94
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "酒楼",
+    "texture": "72fb76fa-ef66-4c17-ab8f-8436eca5f200",
+    "atlas": "",
+    "rect": [
+      5,
+      0,
+      75,
+      86
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      86,
+      86
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

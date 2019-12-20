@@ -100,11 +100,7 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     touchRelease: function touchRelease(eventTouch) {
-        this.plateController.effectArea.active = false;
-        this.node.zIndex = 0;
-        this.canConnectballs.forEach(function (v) {
-            v.zIndex = 0;
-        });
+
         //检测是否可消除
         if (this.lineController.connectedBalls.length >= 3) {
             this.plateController.deleteBalls(this.lineController.connectedBalls);
@@ -112,25 +108,30 @@ cc.Class({
             this.plateController.countBallsFallingDistance();
             this.plateController.updateBall();
             this.lineController.clearLines();
-            if (this.lineController.connectedBalls.length >= 5) {
-                this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[(0, _Config.randomRangeInt)(0, 39)]));
-                this.plateController.generateNewBalls();
-                this.plateController.countBallsFallingDistance();
-                this.plateController.updateBall();
-            }
+            // if(this.lineController.connectedBalls.length>=5){
+            //     this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[randomRangeInt(0,39)]))
+            //     this.plateController.generateNewBalls();
+            //     this.plateController.countBallsFallingDistance();
+            //     this.plateController.updateBall();
+            // }
         } else {
             this.lineController.clearLines();
         }
+        this.plateController.blockArea.active = false;
+        this.node.zIndex = 0;
+        this.canConnectballs.forEach(function (v) {
+            v.zIndex = 0;
+        });
         this.dot.parent = null;
         this.lineController.connectedBalls = [];
     },
     setListener: function setListener() {
         this.node.on(cc.Node.EventType.TOUCH_START, function (eventTouch) {
-            this.plateController.effectArea.active = true; //激活遮罩
-            this.node.zIndex = 1; //设置选中珠子盖在遮罩上
+            this.plateController.blockArea.active = true; //激活遮罩
+            this.node.zIndex = 2; //设置选中珠子盖在遮罩上
             this.canConnectballs = this.filterBalls(this.plateController.ballArea.children, this.node.name);
             this.canConnectballs.forEach(function (v) {
-                v.zIndex = 1;
+                v.zIndex = 2;
             }); //设置所有同颜色珠子盖在遮罩上
             if (!this.dot) this.dot = cc.instantiate(this.plateController.dotPrefab); //创建触摸点
             this.dot.parent = this.lineController.node; //触摸点添加到LineArea
@@ -148,7 +149,7 @@ cc.Class({
         if (this.lineController.connectedBalls.length == 0) {
             this.lineController.connectedBalls.push(self.node);
         } else {
-            if (self.node.zIndex == 1) {
+            if (self.node.zIndex == 2) {
                 //判断高亮
                 if (this.roundBalls(this.lineController.connectedBalls[this.lineController.connectedBalls.length - 1])) {
                     //判断附近球

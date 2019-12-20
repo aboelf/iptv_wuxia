@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "骨骼动画人设2_tex",
+    "texture": "e68a44aa-df67-4a9e-b7cd-702a3c048812",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      963,
+      2035
+    ],
+    "offset": [
+      -29.5,
+      5.5
+    ],
+    "originalSize": [
+      1024,
+      2048
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

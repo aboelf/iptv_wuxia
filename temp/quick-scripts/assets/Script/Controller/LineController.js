@@ -1,6 +1,6 @@
-(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/Model/LineController.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/Controller/LineController.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
 cc._RF.push(module, 'c5a82JVH1JONZcN6e7He/Bf', 'LineController', __filename);
-// Script/Model/LineController.js
+// Script/Controller/LineController.js
 
 "use strict";
 
@@ -38,11 +38,11 @@ cc.Class({
                 var t = new cc.Vec2(100, 0);
                 var angleBE = beginBall.getPosition().sub(endBall.getPosition());
                 if (angleBE.x < 0 && angleBE.y < 0 || angleBE.x > 0 && angleBE.y < 0) {
-                    line.rotation = 180 + t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                    line.angle = -(180 + t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI);
                 } else if (angleBE.x == 0 && angleBE.y < 0) {
-                    line.rotation = -t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                    line.angle = t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
                 } else {
-                    line.rotation = 180 - t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                    line.angle = -(180 - t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI);
                 }
             }
         }
@@ -58,11 +58,11 @@ cc.Class({
             var t = new cc.Vec2(100, 0);
             var angleBE = beginBall.getPosition().sub(endBall.getPosition());
             if (angleBE.x < 0 && angleBE.y < 0 || angleBE.x > 0 && angleBE.y < 0) {
-                line.rotation = 180 + t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                line.angle = -(180 + t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI);
             } else if (angleBE.x == 0 && angleBE.y < 0) {
-                line.rotation = -t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                line.angle = t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
             } else {
-                line.rotation = 180 - t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI;
+                line.angle = -(180 - t.angle(beginBall.getPosition().sub(endBall.getPosition())) * 180 / Math.PI);
             }
         }
     },

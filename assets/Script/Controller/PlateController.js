@@ -1,6 +1,8 @@
 window.Global = {
     plateController: null,
     lineController: null,
+    effectArea:null,
+    blockArea:null,
     // map:null
 };
 cc.Class({
@@ -17,6 +19,7 @@ cc.Class({
         ballArea: cc.Node,
         lineArea: cc.Node,
         effectArea: cc.Node,
+        blockArea:cc.Node,
         emptyPostions: [],
         // map:[],       
     },
@@ -67,7 +70,7 @@ cc.Class({
         let balls = [];
         for (let i = 0; i < this.ballArea.children.length; i++) {
             const element = this.ballArea.children[i];
-            if(element.name!='effectArea'){
+            if(element.name!='blockArea'){
                 if(element.column==ball.column){
                     if(Math.abs(ball.row-element.row)==1){
                         balls.push(element);
@@ -103,7 +106,7 @@ cc.Class({
     countBallsFallingDistance() {//计算所有珠子下降距离
         this.fallingBall = new Set();
         for (let i = 0; i < this.ballArea.children.length; i++) {
-            if (this.ballArea.children[i].name != "effectArea") {
+            if (this.ballArea.children[i].name != "blockArea") {
                 let oriBall = this.ballArea.children[i];
                 if (oriBall.parent != null) {
                     let distance = 0;
@@ -178,14 +181,12 @@ cc.Class({
     },
     onLoad() {
         this.drawBalls();
-        this.effectArea.zIndex = 1;
-        cc.log(this.effectArea)
+        this.blockArea.zIndex = 1;
         this.isInPlayAni = false;
         var manager = cc.director.getCollisionManager();
         manager.enabled = true;
         Global.plateController = this;
         Global.lineController = this.lineArea.getComponent('LineController');
-        // Global.map = this.map;
     },
 
     start() {

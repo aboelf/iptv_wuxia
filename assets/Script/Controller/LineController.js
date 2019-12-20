@@ -32,11 +32,11 @@ cc.Class({
                 let t = new cc.Vec2(100,0);
                 let angleBE=beginBall.getPosition().sub(endBall.getPosition());
                 if((angleBE.x<0 && angleBE.y<0) || (angleBE.x>0 && angleBE.y<0)){
-                    line.rotation=180+t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI;
+                    line.angle=-(180+t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI);
                 }else if(angleBE.x==0 && angleBE.y<0){
-                    line.rotation=-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI
+                    line.angle=t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI
                 }else{
-                    line.rotation=180-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI;
+                    line.angle=-(180-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI);
                 }
             }
         }
@@ -52,11 +52,11 @@ cc.Class({
             let t = new cc.Vec2(100,0);
             let angleBE=beginBall.getPosition().sub(endBall.getPosition());
             if((angleBE.x<0 && angleBE.y<0) || (angleBE.x>0 && angleBE.y<0)){
-                line.rotation=180+t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI;
+                line.angle=-(180+t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI);
             }else if(angleBE.x==0 && angleBE.y<0){
-                line.rotation=-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI
+                line.angle=t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI
             }else{
-                line.rotation=180-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI;
+                line.angle=-(180-t.angle(beginBall.getPosition().sub(endBall.getPosition()))*180/Math.PI);
             }
         }
     },

@@ -1,0 +1,14 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "骨骼动画人设2_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":1024,\"SubTexture\":[{\"width\":94,\"y\":1798,\"height\":155,\"name\":\"右大臂\",\"x\":265},{\"width\":317,\"y\":1400,\"height\":208,\"name\":\"右手\",\"x\":1},{\"width\":494,\"y\":1209,\"height\":189,\"name\":\"执剑\",\"x\":1},{\"width\":129,\"y\":1784,\"height\":127,\"name\":\"右小臂\",\"x\":438},{\"width\":150,\"y\":1400,\"height\":83,\"name\":\"右脚\",\"x\":320},{\"width\":116,\"y\":1772,\"height\":156,\"name\":\"右大腿\",\"x\":147},{\"width\":151,\"y\":1651,\"height\":145,\"name\":\"右小腿\",\"x\":285},{\"frameX\":0,\"y\":1610,\"frameY\":-9,\"frameWidth\":282,\"width\":282,\"frameHeight\":169,\"height\":160,\"name\":\"髋骨\",\"x\":1},{\"width\":146,\"y\":1913,\"height\":76,\"name\":\"左脚\",\"x\":361},{\"width\":144,\"y\":1772,\"height\":149,\"name\":\"左大腿\",\"x\":1},{\"width\":154,\"y\":1686,\"height\":143,\"name\":\"左小腿\",\"x\":804},{\"frameX\":-8,\"y\":1499,\"frameY\":-10,\"frameWidth\":336,\"width\":320,\"frameHeight\":162,\"height\":150,\"name\":\"下摆\",\"x\":320},{\"width\":160,\"y\":1634,\"height\":145,\"name\":\"碎布-右\",\"x\":642},{\"width\":148,\"y\":1651,\"height\":131,\"name\":\"碎布-中\",\"x\":438},{\"width\":77,\"y\":1913,\"height\":123,\"name\":\"碎布-左\",\"x\":509},{\"width\":280,\"y\":1209,\"height\":288,\"name\":\"躯干\",\"x\":497},{\"width\":107,\"y\":1923,\"height\":87,\"name\":\"左手\",\"x\":1},{\"width\":126,\"y\":1499,\"height\":185,\"name\":\"左大臂\",\"x\":838},{\"width\":123,\"y\":1781,\"height\":146,\"name\":\"左小臂\",\"x\":588},{\"width\":72,\"y\":1798,\"height\":104,\"name\":\"右肩甲\",\"x\":361},{\"width\":194,\"y\":1499,\"height\":133,\"name\":\"左肩甲\",\"x\":642},{\"width\":606,\"y\":1,\"height\":602,\"name\":\"头\",\"x\":1},{\"width\":606,\"y\":605,\"height\":602,\"name\":\"表情-生气\",\"x\":1}],\"height\":2048,\"name\":\"骨骼动画人设2\",\"imagePath\":\"骨骼动画人设2_tex.png\"}",
+  "_texture": {
+    "__uuid__": "e68a44aa-df67-4a9e-b7cd-702a3c048812"
+  },
+  "texture": {
+    "__uuid__": "e68a44aa-df67-4a9e-b7cd-702a3c048812"
+  },
+  "_textureAtlasData": null
+}

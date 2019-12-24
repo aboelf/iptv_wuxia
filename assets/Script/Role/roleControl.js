@@ -27,13 +27,21 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        role:{
+            default:null,
+            type:dragonBones.ArmatureDisplay
+        },
+        enemy:{
+            default:null,
+            type:dragonBones.ArmatureDisplay
+        }
 
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-
+        // cc.log(this.role)
     },
 
     start () {

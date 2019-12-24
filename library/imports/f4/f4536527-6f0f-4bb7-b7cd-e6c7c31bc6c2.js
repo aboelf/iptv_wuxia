@@ -44,16 +44,20 @@ cc.Class({
     },
     filterBalls: function filterBalls(balls, type) {
         //筛选球
-        var returnBalls = [];
-        for (var i = 0; i < balls.length; i++) {
-            var fiballs = balls.filter(function (v) {
-                return v.name == type;
-            });
-            fiballs.forEach(function (element) {
-                returnBalls.push(element);
-            });
-        }
-        return returnBalls;
+        // let returnBalls = [];
+        // for (let i = 0; i < balls.length; i++) {
+        //     let fiballs = balls.filter(function (v) {
+        //         return v.name == type
+        //     });
+        //     fiballs.forEach(element => {
+        //         returnBalls.push(element);
+        //     });
+        // }
+        // return returnBalls;
+        var fiballs = balls.filter(function (v) {
+            return v.name == type;
+        });
+        return fiballs;
     },
     roundBalls: function roundBalls(ball) {
         //返回周围球(ball传入最后入队列的球)
@@ -100,7 +104,11 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     touchRelease: function touchRelease(eventTouch) {
-
+        //无论是否消除先将zIndex为2的珠子改为0
+        this.node.zIndex = 0;
+        this.canConnectballs.forEach(function (v) {
+            v.zIndex = 0;
+        });
         //检测是否可消除
         if (this.lineController.connectedBalls.length >= 3) {
             this.plateController.deleteBalls(this.lineController.connectedBalls);
@@ -109,19 +117,17 @@ cc.Class({
             this.plateController.updateBall();
             this.lineController.clearLines();
             // if(this.lineController.connectedBalls.length>=5){
-            //     this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[randomRangeInt(0,39)]))
-            //     this.plateController.generateNewBalls();
-            //     this.plateController.countBallsFallingDistance();
-            //     this.plateController.updateBall();
+            //播放莲花动画，炸=>删除珠子=>生成新珠子=>计算掉落距离=>执行掉落
+            // this.plateController.blockArea.active = false;
+            // this.plateController.deleteBalls(this.plateController.getRoundBalls(this.plateController.ballArea.children[randomRangeInt(0,39)]))
+            // this.plateController.generateNewBalls();
+            // this.plateController.countBallsFallingDistance();
+            // this.plateController.updateBall();
             // }
         } else {
             this.lineController.clearLines();
+            this.plateController.blockArea.active = false;
         }
-        this.plateController.blockArea.active = false;
-        this.node.zIndex = 0;
-        this.canConnectballs.forEach(function (v) {
-            v.zIndex = 0;
-        });
         this.dot.parent = null;
         this.lineController.connectedBalls = [];
     },
@@ -169,14 +175,21 @@ cc.Class({
                             break;
                     }
                 }
-                // cc.log(this.lineController.connectedBalls)
             }
         }
     },
+    actionDone: function actionDone() {
+        this.plateController.blockArea.active = false;
+        this.plateController.blockArea.getComponent(cc.BlockInputEvents).enabled = false;
+        console.log('actionDone');
+    },
+    actionBefore: function actionBefore() {
+        this.plateController.blockArea.getComponent(cc.BlockInputEvents).enabled = true;
+    },
     fallDown: function fallDown(_distance) {
-        var fallAction = null;
-        fallAction = cc.moveBy(_Config.ANITIME.DOWN * _distance, 0, -188 * _distance);
-        this.node.runAction(fallAction);
+        var fallAction = cc.moveBy(_Config.ANITIME.DOWN * _distance, 0, -188 * _distance);
+        var Action = cc.sequence(cc.callFunc(this.actionBefore, this), fallAction, cc.callFunc(this.actionDone, this));
+        this.node.runAction(Action);
         this.node.row = this.node.row - _distance;
     },
     onLoad: function onLoad() {

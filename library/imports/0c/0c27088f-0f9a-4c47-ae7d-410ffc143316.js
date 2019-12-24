@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, '0c270iPD5pMR659QQ/8FDMW', 'effectController');
-// Script/Controller/effectController.js
+cc._RF.push(module, '0c270iPD5pMR659QQ/8FDMW', 'EffectController');
+// Script/Controller/EffectController.js
 
 "use strict";
 

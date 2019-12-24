@@ -99,8 +99,7 @@
         "timeline",
         "inspector"
       ]
-    },
-    "worker": {}
+    }
   },
   "panels": {
     "sprite-editor": {

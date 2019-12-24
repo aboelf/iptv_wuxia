@@ -26,6 +26,7 @@ cc.Class({
         lineArea: cc.Node,
         effectArea: cc.Node,
         blockArea: cc.Node,
+        blood: cc.Node,
         emptyPostions: []
         // map:[],       
     },
@@ -107,10 +108,16 @@ cc.Class({
     deleteBalls: function deleteBalls(_balls) {
         //随机消除
         this.emptyPostions = _balls;
+        this.countDamage(_balls);
         this.emptyPostions.forEach(function (v) {
             v.removeFromParent(false);
         });
     },
+    countDamage: function countDamage(_balls) {
+        var damage = 100 * _balls.length;
+        this.blood.emit('damage', damage);
+    },
+    //计算伤害
     countBallsFallingDistance: function countBallsFallingDistance() {
         //计算所有珠子下降距离
         this.fallingBall = new Set();

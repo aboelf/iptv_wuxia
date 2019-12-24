@@ -40,22 +40,22 @@
     "relativePath": "Music/Naruto Main Theme.mp3"
   },
   "c290d56e-8add-41c9-bfef-ec65c0afba28": {
-    "asset": 1576547611184,
+    "asset": 1576827194743,
     "meta": 1576399721148,
     "relativePath": "Script"
   },
   "dcf38d81-71c2-473d-88e7-c19fb5456877": {
-    "asset": 1576399721149,
+    "asset": 1577081110808,
     "meta": 1576399721148,
     "relativePath": "Script/Controller"
   },
   "4bed9eba-6532-4df8-8369-d8defe2f8798": {
-    "asset": 1576655462151,
+    "asset": 1576809190994,
     "meta": 1576399721150,
     "relativePath": "Texture"
   },
   "b14e1e4b-829b-4a3a-acfd-47d36d4097d2": {
-    "asset": 1576399721166,
+    "asset": 1577071732118,
     "meta": 1576399721159,
     "relativePath": "Texture/ui"
   },
@@ -65,7 +65,7 @@
     "relativePath": "Prefabs"
   },
   "d37ad749-c375-4f63-876c-5ea16cafcb26": {
-    "asset": 1576399721150,
+    "asset": 1576828218754,
     "meta": 1576399721149,
     "relativePath": "Script/Model"
   },
@@ -188,16 +188,6 @@
     "asset": 1576547620567,
     "meta": 1576547620568,
     "relativePath": "Prefabs/line.prefab"
-  },
-  "eb77e4f3-162a-4b8a-aa90-24f7984b9891": {
-    "asset": 1576830270937,
-    "meta": 1576830270987,
-    "relativePath": "Scence/game.fire"
-  },
-  "be40154e-3dc0-4800-9697-d7ec5eb088fb": {
-    "asset": 1576399721149,
-    "meta": 1576547620788,
-    "relativePath": "Script/Controller/GameController.js"
   },
   "9836134e-b892-4283-b6b2-78b5acf3ed45": {
     "asset": 1575530524000,
@@ -350,14 +340,9 @@
     "relativePath": "Anim/莲花.anim"
   },
   "183582a4-1c68-4a5b-a5cd-d830975f7c08": {
-    "asset": 1576562640715,
+    "asset": 1577080327169,
     "meta": 1576562640700,
     "relativePath": "Anim"
-  },
-  "5d6b9a92-dd5a-4a14-b59d-3a92b24751e8": {
-    "asset": 1576579017169,
-    "meta": 1576579018348,
-    "relativePath": "Script/Config/Config.js"
   },
   "c3d5a9d6-2000-410f-97a0-c545a7de5659": {
     "asset": 1576747959707,
@@ -910,33 +895,63 @@
     "relativePath": "model/primitives.fbx"
   },
   "a3122bcd-3a95-40e4-9fc3-e7568e4f2c0f": {
-    "asset": 1576827191312,
+    "asset": 1576827211773,
     "meta": 1576827191313,
     "relativePath": "Script/Role"
   },
-  "652d4b1f-04ef-485f-9e5c-c6844dc102a9": {
-    "asset": 1576827407104,
-    "meta": 1576827409527,
-    "relativePath": "Script/Role/roleControl.js"
-  },
   "0c27088f-0f9a-4c47-ae7d-410ffc143316": {
     "asset": 1576828222225,
-    "meta": 1576828229419,
-    "relativePath": "Script/Controller/effectController.js"
-  },
-  "c4454302-ccc6-426e-aae8-67cf1d417c51": {
-    "asset": 1576829959628,
-    "meta": 1576830002239,
-    "relativePath": "Script/Controller/PlateController.js"
-  },
-  "f4536527-6f0f-4bb7-b7cd-e6c7c31bc6c2": {
-    "asset": 1576830122941,
-    "meta": 1576830123542,
-    "relativePath": "Script/Model/Ball.js"
+    "meta": 1577081110831,
+    "relativePath": "Script/Controller/EffectController.js"
   },
   "c5a82255-1f52-4e35-970d-e9eec77bf05f": {
     "asset": 1576830247621,
     "meta": 1576830253435,
     "relativePath": "Script/Controller/LineController.js"
+  },
+  "5d6b9a92-dd5a-4a14-b59d-3a92b24751e8": {
+    "asset": 1576833901515,
+    "meta": 1576833907227,
+    "relativePath": "Script/Config/Config.js"
+  },
+  "f4536527-6f0f-4bb7-b7cd-e6c7c31bc6c2": {
+    "asset": 1577068781732,
+    "meta": 1577068872740,
+    "relativePath": "Script/Model/Ball.js"
+  },
+  "b84b1a7e-53fa-428c-b0b3-3e81ec8f5ea1": {
+    "asset": 1577071732116,
+    "meta": 1577071732396,
+    "relativePath": "Texture/ui/战斗页面-3.png"
+  },
+  "652d4b1f-04ef-485f-9e5c-c6844dc102a9": {
+    "asset": 1577072568985,
+    "meta": 1577072570223,
+    "relativePath": "Script/Role/roleControl.js"
+  },
+  "8f9ca658-f836-4df8-ab19-df69edd18fed": {
+    "asset": 1577172324491,
+    "meta": 1577172324549,
+    "relativePath": "Anim/processbar.anim"
+  },
+  "eb77e4f3-162a-4b8a-aa90-24f7984b9891": {
+    "asset": 1577174310920,
+    "meta": 1577174310954,
+    "relativePath": "Scence/game.fire"
+  },
+  "be40154e-3dc0-4800-9697-d7ec5eb088fb": {
+    "asset": 1577087432651,
+    "meta": 1577087445752,
+    "relativePath": "Script/Controller/GameController.js"
+  },
+  "c4454302-ccc6-426e-aae8-67cf1d417c51": {
+    "asset": 1577087370126,
+    "meta": 1577087445765,
+    "relativePath": "Script/Controller/PlateController.js"
+  },
+  "6ff6f2cf-b75c-4714-a2ab-38de89a79e2a": {
+    "asset": 1577173565860,
+    "meta": 1577173752705,
+    "relativePath": "Script/Controller/BloodController.js"
   }
 }

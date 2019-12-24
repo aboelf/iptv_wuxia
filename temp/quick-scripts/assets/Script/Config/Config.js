@@ -51,9 +51,9 @@ function randomRange(min, max) {
 }
 function randomRangeInt(min, max) {
     if (arguments.length == 2) {
-        return Math.floor(this.randomRange(min, max));
+        return Math.floor(randomRange(min, max));
     } else if (arguments.length == 1) {
-        return arguments[0][Math.floor(this.randomRange(0, arguments[0].length))];
+        return arguments[0][Math.floor(randomRange(0, arguments[0].length))];
     }
 }
 

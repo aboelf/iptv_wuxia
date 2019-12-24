@@ -43,7 +43,8 @@ cc.Class({
             type: cc.AudioClip,
             default: null,
         },
-        plateBg: cc.Node
+        plateBg: cc.Node,
+        blood:cc.Node,
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -66,7 +67,9 @@ cc.Class({
     onLoad() {
         // this.gameSceneBGMAudioId = cc.audioEngine.play(this.worldSceneBGM, true, 1);
         // cc.log(this.blockPrefab.data.width,this.blockPrefab.data.height)
-        // this.plateBg.getComponent("PlateController").
+        this.bloodController = this.blood.getComponent("BloodController");
+        this.plateController = this.plateBg.getComponent("PlateController");
+        this.bloodController.totalBlood = 10000;
     },
 
     start() {
